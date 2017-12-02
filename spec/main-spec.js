@@ -1,4 +1,4 @@
-const main = require('../main/main');
+const printInventory = require('../main/main');
 
 describe('pos', function () {
     var allItems;
@@ -69,6 +69,8 @@ describe('pos', function () {
         var expectText = 
         '***<没钱赚商店购物清单>***\n'+
         '名称：荔枝，数量：2斤，单价：15.00(元)，小计：30.00(元)\n'+
+        '----------------------\n' +
+        '挥泪赠送商品：\n'+
         '----------------------\n' +
         '总计：30.00(元)\n' +
         '节省：0.00(元)\n' +
