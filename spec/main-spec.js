@@ -1,11 +1,9 @@
 const printInventory = require('../main/main');
 
 describe('pos', function () {
-    var allItems;
     var inputs;
 
     beforeEach(function () {
-        allItems = loadAllItems();
         inputs = [
             'ITEM000001',
             'ITEM000001',
@@ -52,8 +50,8 @@ describe('pos', function () {
         spyOn(console,'log');
         printInventory(inputs1);
         var expectText =
-        '***<没钱赚商店购物清单>***\n'+ 
-        '名称：雪碧，商量：5瓶，单价：3.00(元)，小计：12.00(元)\n'+
+        '***<没钱赚商店>购物清单***\n'+ 
+        '名称：雪碧，数量：5瓶，单价：3.00(元)，小计：12.00(元)\n'+
         '----------------------\n'+
         '挥泪赠送商品：\n'+
         '名称：雪碧，数量：1瓶\n'+
@@ -67,7 +65,7 @@ describe('pos', function () {
         spyOn(console,'log');
         printInventory(inputs2);
         var expectText = 
-        '***<没钱赚商店购物清单>***\n'+
+        '***<没钱赚商店>购物清单***\n'+
         '名称：荔枝，数量：2斤，单价：15.00(元)，小计：30.00(元)\n'+
         '----------------------\n' +
         '挥泪赠送商品：\n'+
